@@ -2,7 +2,12 @@
 Admin confiurable settings for longclaw apps
 """
 from django.db import models
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail import VERSION as WAGTAIL_VERSION
+
+if WAGTAIL_VERSION >= (3, 0):
+    from wagtail.admin.panels import FieldPanel
+else:
+    from wagtail.wagtailadmin.edit_handlers import FieldPanel
 from wagtail.contrib.settings.models import BaseSetting, register_setting
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
 
