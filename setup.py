@@ -36,9 +36,9 @@ setup(
             "factory-boy",
         ],
         "dev": [
-            "black",
-            "flake8",
-            "isort",
+            "black==22.10.0",
+            "flake8==5.0.4",
+            "isort==5.10.1",
             "pre-commit",
         ],
     },

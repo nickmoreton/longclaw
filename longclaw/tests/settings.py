@@ -89,11 +89,8 @@ TEMPLATES = [
     },
 ]
 
-if django.VERSION >= (1, 10):
-    MIDDLEWARE = MIDDLEWARE
-else:
-    MIDDLEWARE_CLASSES = MIDDLEWARE
-
 STATIC_URL = '/static/'
 
 PRODUCT_VARIANT_MODEL = 'testproducts.ProductVariant'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
