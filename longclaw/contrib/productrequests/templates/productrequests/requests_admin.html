@@ -21,7 +21,12 @@
                 {% include "wagtailadmin/shared/page_status_tag.html" with page=page %}
 
                 {% include "wagtailadmin/pages/_privacy_switch.html" with page=page page_perms=page_perms only %}
-                {% include "wagtailadmin/pages/_lock_switch.html" %}
+                {% comment %} {% include "wagtailadmin/pages/_lock_switch.html" %} {% endcomment %}
+                {% comment %}
+                  It was removed in 2.10
+                  The package is still compatible with wagtail 2.10+ but the lock indicator will not work
+                  This is a temporary measure until we can find a better solution
+                {% endcomment %}
             </div>
         </div>
     </header>

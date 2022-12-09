@@ -15,6 +15,10 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@perl -nle'print $& if m{^[a-zA-Z_-]+:.*?## .*$$}' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-25s\033[0m %s\n", $$1, $$2}'
 
+dev-requirements: ## install development requirements
+	pip install -e . --force-reinstall
+	pip install -r requirements_dev.txt
+
 clean: clean-build clean-pyc
 
 clean-build: ## remove build artifacts
@@ -31,7 +35,7 @@ lint: ## check style with flake8
 	flake8 longclaw tests
 
 test: ## run tests quickly with the default Python
-	python runtests.py tests
+	python runtests.py
 
 test-all: ## run tests on every Python version with tox
 	tox
