@@ -54,3 +54,9 @@ docs/_build
 webpack-stats.json
 *bundle.js*
 .eggs/
+
+# Environments
+/venv
+
+# Wasn't in repo at the moment so ignore them
+package-lock.json
