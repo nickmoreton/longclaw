@@ -65,24 +65,37 @@ For our bakery, I've decided that I want to be able enable a variable discount w
 So lets add a couple more fields to our model to provide the discount information:
 
 ```python
-   discount = models.BooleanField(default=False)
-   discount_percent = models.PositiveSmallIntegerField(
-     default=20,
-     validators=[
-            MaxValueValidator(75)
-        ]
-     )
+  # bakery/catalog/models.py
+
+  from django.core.validators import MaxValueValidator
+  # ... (Keep the existing imports of ProductVariant)
+
+  # ... (Keep the existing fields of ProductVariant)
+  discount = models.BooleanField(default=False)
+  discount_percent = models.PositiveSmallIntegerField(
+    default=20,
+    validators=[
+          MaxValueValidator(75)
+      ]
+    )
 ```
+
 Since I don't want to make mistakes and start offering my bread for free, I have limited the maximum discount to 75%.
 Finally, lets override the price getter to apply the discount:
 
 ```python
-@ProductVariantBase.price.getter
-def price(self):
-  if self.discount:
-    discount_price = self.base_price * Decimal((100 - self.discount_percent) / 100.0 )
-    return discount_price.quantize(Decimal('.01'), decimal.ROUND_HALF_UP)
-  return self.base_price
+  # bakery/catalog/models.py
+
+  import decimal
+  from decimal import Decimal
+  # ... (Keep the existing imports of ProductVariant)
+
+  @ProductVariantBase.price.getter
+  def price(self):
+    if self.discount:
+      discount_price = self.base_price * Decimal((100 - self.discount_percent) / 100.0 )
+      return discount_price.quantize(Decimal('.01'), decimal.ROUND_HALF_UP)
+    return self.base_price
 ```
 
 Now, create and run the migrations for our `catalog` app:
