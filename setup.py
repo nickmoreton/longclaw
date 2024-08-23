@@ -87,8 +87,8 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django>=2.2,<3.3',
-        'wagtail>=2.11,<4.0',
+        'django>=3.2,<3.3',
+        'wagtail>=3.0,<4.0',
         'django-countries',
         'django-extensions',
         'djangorestframework',
@@ -117,14 +117,13 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
-        'Framework :: Django :: 2.0',
+        'Framework :: Django :: 3.2',
         'Framework :: Wagtail',
-        'Framework :: Wagtail :: 2',
+        'Framework :: Wagtail :: 3',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7'
         'Programming Language :: Python :: 3.8'
         'Programming Language :: Python :: 3.9'
         'Programming Language :: Python :: 3.10'
