@@ -20,9 +20,9 @@ jobs:
         python: ["3.7", "3.8", "3.9"]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
       - name: Install NPM and dependencies
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v2
         with:
           node-version: '12.x'
       - name: Build client
@@ -30,12 +30,12 @@ jobs:
           npm install --prefix ./longclaw/client
           npm run build --prefix ./longclaw/client
       - name: Upload client
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: client
           path: ./longclaw/core/static/core/js
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -45,7 +45,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install tox tox-gh-actions
       - name: Download client
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v2
         with:
           name: client
           path: ./longclaw/core/static/core/js
