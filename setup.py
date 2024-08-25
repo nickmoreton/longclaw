@@ -87,7 +87,7 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'Django>=2.2.28,<3.1',
+        'Django>=2.2.28,<3.2',
         'wagtail>=2.13.5,<2.14',
         'django-countries==5.5',
         'django-extensions',
