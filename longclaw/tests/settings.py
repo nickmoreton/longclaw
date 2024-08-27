@@ -97,3 +97,5 @@ else:
 STATIC_URL = '/static/'
 
 PRODUCT_VARIANT_MODEL = 'testproducts.ProductVariant'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
