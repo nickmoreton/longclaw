@@ -1,4 +1,4 @@
-from django.conf.urls import url
+from django.urls import re_path as url
 from longclaw.shipping import api
 from longclaw.settings import API_URL_PREFIX
 

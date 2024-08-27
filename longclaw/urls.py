@@ -1,4 +1,5 @@
-from django.conf.urls import include, url
+from django.urls import include
+from django.urls import re_path as url
 from longclaw.basket import urls as basket_urls
 from longclaw.checkout import urls as checkout_urls
 from longclaw.shipping import urls as shipping_urls

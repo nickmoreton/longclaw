@@ -1,6 +1,6 @@
 from django.contrib.admin.utils import quote
 from django.utils.translation import gettext as _
-from django.conf.urls import url
+from django.urls import re_path as url
 
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, modeladmin_register
