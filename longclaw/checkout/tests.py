@@ -1,5 +1,5 @@
 import uuid
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.test import TestCase
 from django.test.client import RequestFactory
 from wagtail.core.models import Site
@@ -98,10 +98,10 @@ class CheckoutApiShippingTest(LongclawTestCase):
     def test_create_order_with_basket_shipping_option(self):
         amount = 11
         rate = ShippingRate.objects.create(
-            name=force_text(uuid.uuid4()),
+            name=force_str(uuid.uuid4()),
             rate=amount,
-            carrier=force_text(uuid.uuid4()),
-            description=force_text(uuid.uuid4()),
+            carrier=force_str(uuid.uuid4()),
+            description=force_str(uuid.uuid4()),
             basket_id=self.basket_id,
         )
         order = create_order(
@@ -116,10 +116,10 @@ class CheckoutApiShippingTest(LongclawTestCase):
     def test_create_order_with_address_shipping_option(self):
         amount = 12
         rate = ShippingRate.objects.create(
-            name=force_text(uuid.uuid4()),
+            name=force_str(uuid.uuid4()),
             rate=amount,
-            carrier=force_text(uuid.uuid4()),
-            description=force_text(uuid.uuid4()),
+            carrier=force_str(uuid.uuid4()),
+            description=force_str(uuid.uuid4()),
             destination=self.shipping_address,
         )
         order = create_order(
@@ -134,10 +134,10 @@ class CheckoutApiShippingTest(LongclawTestCase):
     def test_create_order_with_address_and_basket_shipping_option(self):
         amount = 13
         rate = ShippingRate.objects.create(
-            name=force_text(uuid.uuid4()),
+            name=force_str(uuid.uuid4()),
             rate=amount,
-            carrier=force_text(uuid.uuid4()),
-            description=force_text(uuid.uuid4()),
+            carrier=force_str(uuid.uuid4()),
+            description=force_str(uuid.uuid4()),
             destination=self.shipping_address,
             basket_id=self.basket_id,
         )

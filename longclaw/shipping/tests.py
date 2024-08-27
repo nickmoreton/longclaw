@@ -2,7 +2,7 @@ import uuid
 import mock
 from decimal import Decimal
 
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.test import TestCase
 from django.test.client import RequestFactory
 from django.forms.models import model_to_dict
@@ -464,7 +464,7 @@ class ShippingRateProcessorTest(LongclawTestCase):
         
         processor = ShippingRateProcessor()
         processor.process_rates = lambda **kwargs: rates
-        processor.get_rates_cache_key = lambda **kwargs: force_text('foo')
+        processor.get_rates_cache_key = lambda **kwargs: force_str('foo')
         
         self.assertEqual(processor.get_rates(), rates)
         
@@ -472,7 +472,7 @@ class ShippingRateProcessorTest(LongclawTestCase):
         
         self.assertEqual(processor.get_rates(), rates)
         
-        processor.get_rates_cache_key = lambda **kwargs: force_text('bar')
+        processor.get_rates_cache_key = lambda **kwargs: force_str('bar')
         
         self.assertEqual(processor.get_rates(), rates_alt)
 
