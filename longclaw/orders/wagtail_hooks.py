@@ -1,5 +1,5 @@
 from django.contrib.admin.utils import quote
-from django.utils.translation import ugettext as _
+from django.utils.translation import gettext as _
 from django.conf.urls import url
 
 from wagtail.contrib.modeladmin.options import (
