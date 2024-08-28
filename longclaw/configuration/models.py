@@ -2,7 +2,7 @@
 Admin confiurable settings for longclaw apps
 """
 from wagtail.contrib.settings.models import BaseSetting, register_setting
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 from wagtail.snippets.edit_handlers import SnippetChooserPanel
 from django.db import models
 

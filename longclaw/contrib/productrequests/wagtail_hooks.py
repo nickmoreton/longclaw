@@ -3,7 +3,7 @@ try:
 except ImportError:
     from django.core.urlresolvers import reverse
 
-from wagtail.core import hooks
+from wagtail import hooks
 from wagtail.admin import widgets
 from longclaw.utils import ProductVariant
 

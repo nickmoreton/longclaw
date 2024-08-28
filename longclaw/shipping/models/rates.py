@@ -2,7 +2,7 @@ from django.db import models
 from django.dispatch import receiver
 
 from longclaw.basket.signals import basket_modified
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 
 from ..signals import address_modified
 

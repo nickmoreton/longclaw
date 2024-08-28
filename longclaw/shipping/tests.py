@@ -17,7 +17,7 @@ from longclaw.basket.signals import basket_modified
 from longclaw.basket.utils import basket_id
 from rest_framework import status
 from rest_framework.views import APIView
-from  wagtail.core.models import Site
+from  wagtail.models import Site
 
 from .models import Address, ShippingRate, clear_basket_rates, clear_address_rates, ShippingRateProcessor
 from .signals import address_modified

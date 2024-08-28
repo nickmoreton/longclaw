@@ -1,5 +1,5 @@
 import datetime
-from wagtail.core import hooks
+from wagtail import hooks
 from wagtail.admin.site_summary import SummaryItem
 from longclaw.orders.models import Order
 from longclaw.stats import stats

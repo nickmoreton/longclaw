@@ -2,7 +2,7 @@ import uuid
 from django.utils.encoding import force_str
 from django.test import TestCase
 from django.test.client import RequestFactory
-from wagtail.core.models import Site
+from wagtail.models import Site
 try:
     from django.urls import reverse_lazy
 except ImportError:
