@@ -87,13 +87,13 @@ setup(
     ],
     include_package_data=True,
     install_requires=[
-        'django>=2.2,<3.0',
-        'wagtail>=2.11,<2.14',
-        'django-countries==5.5',
-        'django-extensions==2.2.1',
-        'djangorestframework==3.11.2',
-        'django-ipware==2.1.0',
-        'django-polymorphic==2.0.3',
+        'django>=3.2,<4.2',
+        'wagtail>=3.0,<5.0',
+        'django-countries',
+        'django-extensions',
+        'djangorestframework',
+        'django-ipware',
+        'django-polymorphic',
     ],
     extras_require={
         "testing": [
