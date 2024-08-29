@@ -1,7 +1,7 @@
 name: Tests
 
 on:
-  # push: # Save time on testing for now
+  push:
   pull_request:
 
 concurrency:
