@@ -4,7 +4,6 @@ from modelcluster.fields import ParentalKey
 from wagtail.models import Page, Orderable
 from wagtail.fields import RichTextField
 from wagtail.admin.panels import FieldPanel, InlinePanel
-from wagtail.images.edit_handlers import ImageChooserPanel
 from longclaw.products.models import ProductVariantBase, ProductBase
 
 class ProductIndex(Page):
@@ -54,6 +53,6 @@ class ProductImage(Orderable):
     caption = models.CharField(blank=True, max_length=255)
 
     panels = [
-        ImageChooserPanel('image'),
+        FieldPanel('image'),
         FieldPanel('caption')
     ]
