@@ -1,12 +1,10 @@
 import uuid
 from django.utils.encoding import force_str
+from django.urls import reverse_lazy
 from django.test import TestCase
 from django.test.client import RequestFactory
+
 from wagtail.models import Site
-try:
-    from django.urls import reverse_lazy
-except ImportError:
-    from django.core.urlresolvers import reverse_lazy
 
 from longclaw.tests.utils import (
     LongclawTestCase,
