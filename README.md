@@ -24,9 +24,9 @@ We are working to upgrade the package for the latest versions of Django and Wagt
 
 We are currently running the tests against the following versions of Python, Django and Wagtail.
 
-- Django >= 2.2, < 3.1
-- Wagtail >= 2.11, < 2.14
-- Python >= 3.7, < 3.10
+- Django >= 4.1, <= 4.2
+- Wagtail >= 4.1, <= 5.2
+- Python >= 3.9, <= 3.11
 
 ### Developers
 
