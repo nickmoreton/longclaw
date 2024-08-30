@@ -9,7 +9,7 @@ from longclaw.utils import ProductVariant, maybe_get_product_model
 
 class LongclawSummaryItem(SummaryItem):
     order = 10
-    template = 'stats/summary_item.html'
+    template_name = 'stats/summary_item.html'
 
     def get_context(self):
         return {
@@ -60,7 +60,7 @@ class MonthlySales(LongclawSummaryItem):
 
 class LongclawStatsPanel(SummaryItem):
     order = 110
-    template = 'stats/stats_panel.html'
+    template_name = 'stats/stats_panel.html'
     def get_context(self):
         month_start, month_end = stats.current_month()
         daily_sales = stats.daily_sales(month_start, month_end)
