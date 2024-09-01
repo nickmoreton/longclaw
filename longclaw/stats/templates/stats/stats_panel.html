@@ -1,15 +1,17 @@
 {% load i18n wagtailadmin_tags %}
 
-<section class="panel nice-padding">
-
+<section class="w-summary">
+  <div class="help-block help-info">
+    <p>Longclaw Statistics</p>
+  </div>
   <div class="col6">
     <canvas id="daily-sales" width="100" height="75"></canvas>
-    <br>
+    <br />
   </div>
 
   <div class="col6">
     <canvas id="popular-products" width="100" height="75"></canvas>
-    <br>
+    <br />
   </div>
 </section>
 
@@ -18,80 +20,87 @@
 <script>
   var ctx = document.getElementById("daily-sales");
   var data = {
-    labels: {{ labels|safe }},
-  datasets: [
-    {
-      data: {{ daily_income }}
-      }
-  ]
+    labels: "{{ labels|safe }}",
+    datasets: [
+      {
+        data: "{{ daily_income }}",
+      },
+    ],
   };
   var dailySalesChart = new Chart(ctx, {
-    type: 'line',
+    type: "line",
     data: data,
     options: {
       title: {
         display: true,
-        text: 'Revenue this month'
+        text: "Revenue this month",
       },
       legend: {
-        display: false
+        display: false,
       },
       scales: {
-        xAxes: [{
-              scaleLabel: {
-                  display: true,
-                  labelString: 'Date'
-                }
-            }],
-        yAxes: [{
-          scaleLabel: {
+        xAxes: [
+          {
+            scaleLabel: {
               display: true,
-              labelString: 'Revenue ({{currency}})'
-            }
-        }]
-      }
-    }
+              labelString: "Date",
+            },
+          },
+        ],
+        yAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: "Revenue ({{currency}})",
+            },
+          },
+        ],
+      },
+    },
   });
 
   var ctx_products = document.getElementById("popular-products");
   var data = {
-    labels: {{ product_labels|safe }},
+    labels: "{{ product_labels|safe }}",
     datasets: [
       {
-        data: {{ sales_volume }}
-      }
-    ]
+        data: "{{ sales_volume }}",
+      },
+    ],
   };
 
   var popProductsChart = new Chart(ctx_products, {
-    type: 'bar',
+    type: "bar",
     data: data,
     options: {
       title: {
         display: true,
-        text: 'Popular products this month'
+        text: "Popular products this month",
       },
       scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                },
-                scaleLabel: {
-                  display: true,
-                  labelString: 'No. Sales'
-                }
-            }],
-            xAxes: [{
-              scaleLabel: {
-                  display: true,
-                  labelString: 'Product Title'
-                }
-            }]
-        },
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+            scaleLabel: {
+              display: true,
+              labelString: "No. Sales",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            scaleLabel: {
+              display: true,
+              labelString: "Product Title",
+            },
+          },
+        ],
+      },
       legend: {
-        display: false
-      }
-    }
-  })
-
+        display: false,
+      },
+    },
+  });
 </script>

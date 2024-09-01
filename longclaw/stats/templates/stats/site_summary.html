@@ -1,0 +1,26 @@
+{% load wagtailadmin_tags %}
+<section class="w-summary" aria-labelledby="header-title">
+    <div class="help-block help-info">
+        <p>Longclaw Summary</p>
+      </div>
+  <ul class="w-summary__list">
+    <li>
+        {% icon name="warning" %}
+        <a href="{{ outstanding_orders.url }}">
+            <span>{{ outstanding_orders.total }}</span> {{ outstanding_orders.label }}
+        </a>
+    </li>
+    <li>
+        {% icon name="list-ul" %}
+        <a href="{{ product_count.url }}">
+            <span>{{ product_count.total }}</span> {{ product_count.label }}
+        </a>
+    </li>
+    <li>
+        {% icon name="tick" %}
+        <a href="{{ sales_count.url }}">
+            <span>{{ sales_count.total }}</span> {{ sales_count.label }}
+        </a>
+    </li>
+  </ul>
+</section>
