@@ -17,7 +17,6 @@ The aim is to support modern versions of Django and Wagtail and continue to use 
 TODO: These are parts of the project that need further work.
 
 * Currently it may not be possible to use the longclaw.contrib apps
-* The dashboard panels need further work to be compatible with Wagtail 4.1+
 
 1.0.0
 +++++++++++
