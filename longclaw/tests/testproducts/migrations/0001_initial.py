@@ -3,7 +3,7 @@
 from django.db import migrations, models
 import django.db.models.deletion
 import modelcluster.fields
-import wagtail.core.fields
+import wagtail.fields
 
 
 class Migration(migrations.Migration):
@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
             name='Product',
             fields=[
                 ('page_ptr', models.OneToOneField(auto_created=True, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, serialize=False, to='wagtailcore.Page')),
-                ('description', wagtail.core.fields.RichTextField()),
+                ('description', wagtail.fields.RichTextField()),
             ],
             options={
                 'abstract': False,
@@ -43,7 +43,7 @@ class Migration(migrations.Migration):
                 ('base_price', models.DecimalField(decimal_places=2, max_digits=12)),
                 ('ref', models.CharField(max_length=32)),
                 ('stock', models.IntegerField(default=0)),
-                ('description', wagtail.core.fields.RichTextField()),
+                ('description', wagtail.fields.RichTextField()),
                 ('product', modelcluster.fields.ParentalKey(on_delete=django.db.models.deletion.CASCADE, related_name='variants', to='testproducts.Product')),
             ],
             options={

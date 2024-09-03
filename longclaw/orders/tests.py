@@ -1,11 +1,10 @@
 import mock
+
 from django.test import TestCase
 from django.contrib.auth.models import User
-try:
-  from django.urls import reverse_lazy
-except ImportError:
-  from django.core.urlresolvers import reverse_lazy
+from django.urls import reverse_lazy
 from django.contrib.auth.models import User
+
 from wagtail.tests.utils import WagtailTestUtils
 from longclaw.tests.utils import LongclawTestCase, OrderFactory
 from longclaw.orders.wagtail_hooks import OrderModelAdmin

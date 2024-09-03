@@ -3,6 +3,22 @@
 History
 -------
 
+Unreleased
++++++++++++
+
+Modernise the project for later versions of python, Django and Wagtail.
+The aim is to support modern versions of Django and Wagtail and continue to use the existing tests to ensure compatibility.
+
+* Django >= 4.1, <= 4.2
+* Wagtail >= 4.1, <= 5.2
+* Python >= 3.9, <= 3.11
+* Fixes the api url to be at the root of the domain
+
+
+TODO: These are parts of the project that need further work.
+
+* Currently it may not be possible to use the longclaw.contrib apps
+
 1.0.0
 +++++++++++
 

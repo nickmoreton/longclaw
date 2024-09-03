@@ -109,11 +109,11 @@ You will need to sign in with the super user you created at the start of the tut
 
 Under 'Pages', select the root page:
 
-![Root page](assets/longclaw-select-root-page.png)
+![Root page](../assets/longclaw-select-root-page.png)
 
 On the 'Root' screen select 'Add Child Page' at the top. Here I selected my 'Home' page, but if you are running a small shop, you may wish your home page to be your product listing, in which case you might select 'Product Index'.
 
-![Adding a home page](assets/longclaw-bakery-create-product-index.png)
+![Adding a home page](../assets/longclaw-bakery-create-product-index.png)
 
 
 We can now add `Product` models as children of `ProductIndex`. Only pages of type `Product` can be created under `ProductIndex`.
@@ -127,10 +127,10 @@ Add a title, description then start adding variants.
 You will see that in the product variants are the custom fields we added for
 applying discounts.
 
-![Image of the product](assets/longclaw-bakery-add-product.png)
+![Image of the product](../assets/longclaw-bakery-add-product.png)
 
 
 If we navigate back to the product index page, we see the new product listed:
 
-![Image of the product index](assets/longclaw-bakery-product-index.png)
+![Image of the product index](../assets/longclaw-bakery-product-index.png)
 

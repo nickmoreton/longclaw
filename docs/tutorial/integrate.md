@@ -66,12 +66,12 @@ urlpatterns = [
 
 6. In this new app, add the following models
 
-```
+```python
 from django.db import models
 from django_extensions.db.fields import AutoSlugField
 from modelcluster.fields import ParentalKey
-from wagtail.core.models import Page, Orderable
-from wagtail.core.fields import RichTextField
+from wagtail.models import Page, Orderable
+from wagtail.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from longclaw.products.models import ProductVariantBase, ProductBase

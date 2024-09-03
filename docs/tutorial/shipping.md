@@ -21,7 +21,7 @@ using the `loadcountries` command:
 In the image below, we set a standard rate for the UK. It is possible to select multiple countries
 for a rate to apply to. We can also create more than one shipping rate for the same country.
 
-![Shipping](assets/shipping.png)
+![Shipping](../assets/shipping.png)
 
 ## Default Shipping Rate
 
@@ -37,7 +37,7 @@ To enable default shipping:
 - Fill in `Default Shipping Rate` and `Default Shipping Carrier`
 - Ensure `Enable Default Shipping` is checked.
 
-![Default shipping](assets/default_shipping.png)
+![Default shipping](../assets/default_shipping.png)
 
 ### Currency
 

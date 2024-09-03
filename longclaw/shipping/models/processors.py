@@ -1,7 +1,7 @@
 import json
 import hashlib
 
-from django.utils.encoding import force_bytes, force_text
+from django.utils.encoding import force_bytes, force_str
 from django.core.cache import cache
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db import models, transaction
@@ -10,7 +10,7 @@ from django.dispatch import receiver
 from longclaw.basket.models import BasketItem
 from longclaw.basket.signals import basket_modified
 from polymorphic.models import PolymorphicModel
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.admin.panels import FieldPanel
 
 from ..serializers.locations import AddressSerializer
 from ..signals import address_modified
@@ -61,7 +61,7 @@ class ShippingRateProcessor(PolymorphicModel):
         
         hashed_key = hashlib.sha1(force_bytes(raw_key)).hexdigest()
         
-        return force_text(hashed_key)
+        return force_str(hashed_key)
     
     def process_rates(self, **kwargs):
         raise NotImplementedError()

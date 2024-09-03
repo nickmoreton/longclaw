@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'wagtail.images',
     'wagtail.search',
     'wagtail.admin',
-    'wagtail.core',
+    'wagtail',
     'wagtail.contrib.modeladmin',
     'wagtail.contrib.settings',
 
@@ -97,3 +97,5 @@ else:
 STATIC_URL = '/static/'
 
 PRODUCT_VARIANT_MODEL = 'testproducts.ProductVariant'
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'

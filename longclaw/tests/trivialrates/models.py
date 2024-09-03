@@ -1,6 +1,6 @@
 import hashlib
 
-from django.utils.encoding import force_bytes, force_text
+from django.utils.encoding import force_bytes, force_str
 from longclaw.shipping.models import ShippingRateProcessor, ShippingRate
 from longclaw.basket.models import BasketItem
 
@@ -45,4 +45,4 @@ class TrivialShippingRateProcessor(ShippingRateProcessor):
     def get_processed_rate_name(self, destination, basket_id, speed):
         name_long = 'TrivialShippingRateProcessor-{}-{}-{}'.format(destination.pk, basket_id, speed)
         name = hashlib.md5(force_bytes(name_long)).hexdigest()
-        return force_text(name)
+        return force_str(name)
