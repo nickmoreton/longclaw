@@ -12,6 +12,7 @@ The aim is to support modern versions of Django and Wagtail and continue to use 
 * Django >= 4.1, <= 4.2
 * Wagtail >= 4.1, <= 5.2
 * Python >= 3.9, <= 3.11
+* Fixes the api url to be at the root of the domain
 
 
 TODO: These are parts of the project that need further work.
