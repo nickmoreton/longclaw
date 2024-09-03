@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import OrderDetail from './OrderDetail'
+import OrderDetail from './OrderDetail';
 
 const target = document.getElementById('order-app');
 ReactDOM.render(

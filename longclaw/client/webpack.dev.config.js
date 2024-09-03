@@ -6,7 +6,7 @@ module.exports = {
   context: __dirname,
   entry: {
     orders: './src/orders/index.jsx',
-    longclawclient: './src/api/client.js',
+    longclawclient: ['./src/api/api.js'],
     vendors: [
       'react', 'isomorphic-fetch', 'whatwg-fetch',
        'immutable',
